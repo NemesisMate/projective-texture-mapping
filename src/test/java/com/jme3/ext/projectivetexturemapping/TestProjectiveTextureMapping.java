@@ -137,23 +137,9 @@ public class TestProjectiveTextureMapping extends SimpleApplication {
         pd2.projector.getProjectorCamera().setParallelProjection(true);
 
         ptr = new TextureProjectorRenderer(assetManager);
+        
         ptr.getTextureProjectors().add(pd1.projector);
-//    ptr.getTextureProjectors().add(pd1.projector);
-//    ptr.getTextureProjectors().add(pd1.projector);
-//    ptr.getTextureProjectors().add(pd1.projector);
-//    ptr.getTextureProjectors().add(pd1.projector);
-//    ptr.getTextureProjectors().add(pd1.projector);
-//    ptr.getTextureProjectors().add(pd1.projector);
-//    ptr.getTextureProjectors().add(pd1.projector);
-
         ptr.getTextureProjectors().add(pd2.projector);
-//    ptr.getTextureProjectors().add(pd2.projector);
-//    ptr.getTextureProjectors().add(pd2.projector);
-//    ptr.getTextureProjectors().add(pd2.projector);
-//    ptr.getTextureProjectors().add(pd2.projector);
-//    ptr.getTextureProjectors().add(pd2.projector);
-//    ptr.getTextureProjectors().add(pd2.projector);
-//    ptr.getTextureProjectors().add(pd2.projector);
 
         Logger.getLogger("").severe(
                 "NUM_PROJECTORS: " + ptr.getTextureProjectors().size() +
