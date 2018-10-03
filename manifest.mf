@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-OpenIDE-Module: com.jme3.ext.projectivetexturemapping
-OpenIDE-Module-Layer: com/jme3/ext/projectivetexturemapping/layer.xml
-OpenIDE-Module-Localizing-Bundle: com/jme3/ext/projectivetexturemapping/Bundle.properties
-OpenIDE-Module-Specification-Version: 0.1.1.1003
-

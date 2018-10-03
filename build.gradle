@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+//    id 'application'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+def JMonkey_version = "3.2.1-stable"
+
+sourceCompatibility = 1.8
+//mainClassName = 'package com.jme3.ext.projectivetexturemapping.Main'
+sourceSets.main.resources.srcDirs(["./assets"])
+sourceSets.test.resources.srcDirs(["./assetsTest"])
+
+dependencies {
+    compile "org.jmonkeyengine:jme3-core:$JMonkey_version"
+
+    testRuntime "org.jmonkeyengine:jme3-desktop:$JMonkey_version"
+    testRuntime "org.jmonkeyengine:jme3-lwjgl:$JMonkey_version"
+}

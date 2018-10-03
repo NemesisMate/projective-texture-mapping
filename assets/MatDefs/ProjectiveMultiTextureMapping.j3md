@@ -1,0 +1,105 @@
+MaterialDef Projective Texture Mapping {
+
+    MaterialParameters {
+        Int NumProjectors
+        Texture2D ProjectiveMap0
+        Texture2D ProjectiveMap1
+        Texture2D ProjectiveMap2
+        Texture2D ProjectiveMap3
+        Texture2D ProjectiveMap4
+        Texture2D ProjectiveMap5
+        Texture2D ProjectiveMap6
+        Texture2D ProjectiveMap7
+        Int CombineMode0 : 0
+        Int CombineMode1 : 0
+        Int CombineMode2 : 0
+        Int CombineMode3 : 0
+        Int CombineMode4 : 0
+        Int CombineMode5 : 0
+        Int CombineMode6 : 0
+        Int CombineMode7 : 0
+        Matrix4 ProjectorViewProjectionMatrix0
+        Matrix4 ProjectorViewProjectionMatrix1
+        Matrix4 ProjectorViewProjectionMatrix2
+        Matrix4 ProjectorViewProjectionMatrix3
+        Matrix4 ProjectorViewProjectionMatrix4
+        Matrix4 ProjectorViewProjectionMatrix5
+        Matrix4 ProjectorViewProjectionMatrix6
+        Matrix4 ProjectorViewProjectionMatrix7
+        Vector3 ProjectorLocation0
+        Vector3 ProjectorLocation1
+        Vector3 ProjectorLocation2
+        Vector3 ProjectorLocation3
+        Vector3 ProjectorLocation4
+        Vector3 ProjectorLocation5
+        Vector3 ProjectorLocation6
+        Vector3 ProjectorLocation7
+        Vector3 ProjectorDirection0
+        Vector3 ProjectorDirection1
+        Vector3 ProjectorDirection2
+        Vector3 ProjectorDirection3
+        Vector3 ProjectorDirection4
+        Vector3 ProjectorDirection5
+        Vector3 ProjectorDirection6
+        Vector3 ProjectorDirection7
+        Float FallOffDistance0
+        Float FallOffDistance1
+        Float FallOffDistance2
+        Float FallOffDistance3
+        Float FallOffDistance4
+        Float FallOffDistance5
+        Float FallOffDistance6
+        Float FallOffDistance7
+        Float FallOffPower0
+        Float FallOffPower1
+        Float FallOffPower2
+        Float FallOffPower3
+        Float FallOffPower4
+        Float FallOffPower5
+        Float FallOffPower6
+        Float FallOffPower7
+    }
+
+    Technique {
+        VertexShader GLSL100:   Shaders/ProjectiveMultiTextureMapping.vert
+        FragmentShader GLSL100: Shaders/ProjectiveMultiTextureMapping.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            WorldMatrix
+            WorldMatrixInverseTranspose
+        }
+
+        RenderState {
+            Blend Alpha
+        }
+
+        Defines {
+            NUM_PROJECTORS : NumProjectors
+            COMBINE_MODE0 : CombineMode0
+            COMBINE_MODE1 : CombineMode1
+            COMBINE_MODE2 : CombineMode2
+            COMBINE_MODE3 : CombineMode3
+            COMBINE_MODE4 : CombineMode4
+            COMBINE_MODE5 : CombineMode5
+            COMBINE_MODE6 : CombineMode6
+            COMBINE_MODE7 : CombineMode7
+            IS_PARALLEL_PROJECTION0: ProjectorDirection0
+            IS_PARALLEL_PROJECTION1: ProjectorDirection1
+            IS_PARALLEL_PROJECTION2: ProjectorDirection2
+            IS_PARALLEL_PROJECTION3: ProjectorDirection3
+            IS_PARALLEL_PROJECTION4: ProjectorDirection4
+            IS_PARALLEL_PROJECTION5: ProjectorDirection5
+            IS_PARALLEL_PROJECTION6: ProjectorDirection6
+            IS_PARALLEL_PROJECTION7: ProjectorDirection7
+            FALL_OFF0 : FallOffDistance0
+            FALL_OFF1 : FallOffDistance1
+            FALL_OFF2 : FallOffDistance2
+            FALL_OFF3 : FallOffDistance3
+            FALL_OFF4 : FallOffDistance4
+            FALL_OFF5 : FallOffDistance5
+            FALL_OFF6 : FallOffDistance6
+            FALL_OFF7 : FallOffDistance7
+        }
+    }
+}

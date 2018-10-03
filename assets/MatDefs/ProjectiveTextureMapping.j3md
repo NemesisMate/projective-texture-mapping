@@ -1,0 +1,31 @@
+MaterialDef Projective Texture Mapping {
+
+    MaterialParameters {
+        Texture2D ProjectiveMap
+        Matrix4 ProjectorViewProjectionMatrix
+        Vector3 ProjectorLocation
+        Vector3 ProjectorDirection
+        Float FallOffDistance
+        Float FallOffPower
+    }
+
+    Technique {
+        VertexShader GLSL100:   Shaders/ProjectiveTextureMapping.vert
+        FragmentShader GLSL100: Shaders/ProjectiveTextureMapping.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            WorldMatrix
+            WorldMatrixInverseTranspose
+        }
+
+        RenderState {
+            Blend Alpha
+        }
+
+        Defines {
+            IS_PARALLEL_PROJECTION : ProjectorDirection
+            FALL_OFF : FallOffDistance
+        }
+    }
+}
